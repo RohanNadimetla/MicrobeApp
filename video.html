@@ -1,0 +1,36 @@
+<html>
+<head>
+ 
+<style>
+
+
+#scanner {
+	width: 250px;
+	height: 250px;
+}
+</style>
+</head>
+ 
+<body>
+
+
+<div>
+	<video autoplay="true" id="scanner"></video>
+</div>
+
+
+<script>
+
+
+var video = document.querySelector("#scanner");
+
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      video.srcObject = stream;
+    })
+
+
+</script>
+
+</body>
+</html>

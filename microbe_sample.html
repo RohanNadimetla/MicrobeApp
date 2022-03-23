@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title> Microbe Sample </title>
+
+<style>
+body{
+  text-align:center;
+  background-color:lightblue;
+}
+#back{
+  font-size:25px;
+  background-color:yellow;
+}
+#next{
+  font-size:25px;
+  background-color:yellow;
+}
+
+#scanner {
+	width: 250px;
+	height: 250px;
+}
+</style>
+
+</head>
+<body>
+
+
+  <u><h1> Microbe Sample </h1></u>
+  
+<div>
+	<video autoplay="true" id="scanner"></video>
+</div>
+
+  <h3>Scanning Sample...</h3>
+    <br>
+    <button id="back" onclick="location.href='index.html'"> Back </button>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<button id="next" onclick="location.href='symptoms.html'"> Next </button>
+
+<script>
+
+
+var video = document.querySelector("#scanner");
+
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      video.srcObject = stream;
+    })
+
+
+</script>
+
+</body>
+</html>
